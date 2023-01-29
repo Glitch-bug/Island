@@ -1,4 +1,5 @@
-// todo transform the walk feauture into a sprite method with some variance for mobs
+
+// tabled cause certain settings to change based on which background is chosen
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 var frameCount = 0;
@@ -6,16 +7,16 @@ canvas.width =1024;
 canvas.height = 576;
 
 var collisionsMap = [];
-for (let i=0; i< collisions.length; i+=70){
-    collisionsMap.push(collisions.slice(i, i+70));
+for (let i=0; i< p_collisions.length; i+=70){
+    collisionsMap.push(p_collisions.slice(i, i+70));
     
 }
 
 const image = new Image()
-image.src = './img/Demo Town.png'
+image.src = './img/Pellet Town.png'
 
 const foregroundImage = new Image()
-foregroundImage.src = './img/foreGroundObjects.png'
+foregroundImage.src = './img/pForeGroundObjects.png'
 
 const playerDownImage = new Image();
 playerDownImage.src = './img/playerDown.png'
@@ -31,16 +32,16 @@ playerRightImage.src = './img/playerRight.png'
 
 
 const wolfDownImage = new Image();
-wolfDownImage.src = './img/wolf/wolfWalkDown.png'
+wolfDownImage.src = './img/wolf/wolfWalkDownC.png'
 
 const wolfUpImage = new Image();
-wolfUpImage.src = './img/wolf/wolfWalkUp.png';
+wolfUpImage.src = './img/wolf/wolfWalkUpC.png';
 
 const wolfLeftImage = new Image();
-wolfLeftImage.src = './img/wolf/wolfWalkLeft.png'
+wolfLeftImage.src = './img/wolf/wolfWalkLeftC.png'
 
 const wolfRightImage = new Image();
-wolfRightImage.src = './img/wolf/wolfWalkRight.png'
+wolfRightImage.src = './img/wolf/wolfWalkRightC.png'
 
 const boundary_ids = [2466, 2470, 2468, 2476, 2486, 2478, 2480];
 const boundaries = [];
@@ -61,7 +62,8 @@ collisionsMap.forEach((row, i) => {
                     },
                     nature: {
                         type: symbol
-                    }
+                    },
+                    bool : 0
                 })
             )
         }
@@ -91,8 +93,8 @@ const player = new Sprite({
 
 const wolf = new Sprite({
     position:{
-        x:canvas.width/2 - (200/8), 
-        y:canvas.height/2-(68/2),
+        x:canvas.width/2 - (200/8) - 230, 
+        y:canvas.height/2-(68/2) + 10,
     },
     image: wolfUpImage,
     frames: {
@@ -283,85 +285,26 @@ function animate() {
    // Wolf wandering code 
     if (frameCount % 35 == 0){
         wolf_mob.direction = Math.floor(Math.random() * 5);
-        console.log(wolf_mob.direction)
+        
     }
-    if (wolf_mob.direction == 0){
-        for (let i =0; i < boundaries.length; i++) {
-            const boundary = boundaries[i];
-            if (
-                rectangularCollision({
-                    rectangle1:wolf_mob.sprite, 
-                    rectangle2:{
-                        ...boundary, 
-                        position: {
-                            x: boundary.position.x,
-                            y: boundary.position.y + 2
-                        }
-                    }
-                })
-            ){break}
-        }
+    if (wolf_mob.direction == 0){    
         wolf_mob.sprite.image = wolf_mob.sprite.sprites.up;
-        wolf_mob.walk(wolf_mob.direction);
+        wolf_mob.walk(wolf_mob.direction, [player, ...boundaries]);
     } 
-    else if (wolf_mob.direction == 1){
-        for (let i =0; i < boundaries.length; i++) {
-            const boundary = boundaries[i];
-            if (
-                rectangularCollision({
-                    rectangle1:wolf_mob.sprite, 
-                    rectangle2:{
-                        ...boundary, 
-                        position: {
-                            x: boundary.position.x + 2,
-                            y: boundary.position.y 
-                        }
-                    }
-                })
-            ){break}
-        }
+    else if (wolf_mob.direction == 1){    
         wolf_mob.sprite.image = wolf_mob.sprite.sprites.left;
-        wolf_mob.walk(wolf_mob.direction);
+        wolf_mob.walk(wolf_mob.direction, [player, ...boundaries]);
         
     }
     else if (wolf_mob.direction == 2){
-        for (let i =0; i < boundaries.length; i++) {
-            const boundary = boundaries[i];
-            if (
-                rectangularCollision({
-                    rectangle1:wolf_mob.sprite, 
-                    rectangle2:{
-                        ...boundary, 
-                        position: {
-                            x: boundary.position.x ,
-                            y: boundary.position.y - 2
-                        }
-                    }
-                })
-            ){break}
-        }
         wolf_mob.sprite.image = wolf_mob.sprite.sprites.down;
-        wolf_mob.walk(wolf_mob.direction);
+        wolf_mob.walk(wolf_mob.direction, [player, ...boundaries]);
     }
-    else if (wolf_mob.direction == 3 ) {
-        for (let i =0; i < boundaries.length; i++) {
-            const boundary = boundaries[i];
-            if (
-                rectangularCollision({
-                    rectangle1:wolf_mob.sprite, 
-                    rectangle2:{
-                        ...boundary, 
-                        position: {
-                            x: boundary.position.x - 2,
-                            y: boundary.position.y 
-                        }
-                    }
-                })
-            ){break}
-        }
+    else if (wolf_mob.direction == 3 ){   
         wolf_mob.sprite.image = wolf_mob.sprite.sprites.right;
-        wolf_mob.walk(wolf_mob.direction);
-    }else {
+        wolf_mob.walk(wolf_mob.direction, [player, ...boundaries]);
+    }
+    else {
         wolf_mob.sprite.moving = false;
     }
 frameCount++;

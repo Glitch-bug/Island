@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/Pokemon Style Game Map.tmx",
+    "activeFile": "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/Pellet Town.tmx",
     "expandedProjectPaths": [
     ],
     "exportAsImage.useCurrentScale": true,
@@ -12,12 +12,23 @@
         "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/Collision.tsx": {
             "scaleInDock": 1
         },
-        "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/Pokemon Style Game Map.tmx": {
+        "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/Pellet Town.tmx": {
+            "expandedGroupLayers": [
+                17
+            ],
             "scale": 4,
+            "selectedLayer": 13,
+            "viewCenter": {
+                "x": -76.375,
+                "y": 32.5
+            }
+        },
+        "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/Pokemon Style Game Map.tmx": {
+            "scale": 1.5,
             "selectedLayer": 12,
             "viewCenter": {
-                "x": 418.125,
-                "y": 290.5
+                "x": 419.99999999999994,
+                "y": 240
             }
         },
         "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/Pokemon Style Game.tsx": {
@@ -31,6 +42,9 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/collisionTileset.tsx": {
+            "scaleInDock": 1
+        },
         "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/hm.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
@@ -38,6 +52,9 @@
         "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/nature.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
+        },
+        "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/pokemonStyleGameTileset.tsx": {
+            "scaleInDock": 1
         },
         "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/New folder/Ash Lands Tile set.tsx": {
             "scaleInDock": 1,
@@ -73,13 +90,15 @@
     "openFiles": [
         "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/Pokemon Style Game Map.tmx",
         "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/hm.tsx",
-        "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/collision set.tsx"
+        "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/collision set.tsx",
+        "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/Pellet Town.tmx"
     ],
     "project": "Summon of Ash and Ruin.tiled-project",
     "recentFiles": [
-        "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/collision set.tsx",
-        "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/hm.tsx",
         "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/Pokemon Style Game Map.tmx",
+        "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/hm.tsx",
+        "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/collision set.tsx",
+        "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/Pellet Town.tmx",
         "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/nature.tsx",
         "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/Chris Courses - Pokemon/Tiled/TilesetNature.tsx",
         "C:/Users/t/Desktop/CodeFiles/JavaScript/Summoner Game/New folder/So far not far.tmx",
