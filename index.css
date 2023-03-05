@@ -11,5 +11,5 @@ body {
 #game {
     margin-left: 50%;
     transform: translate(-50%, 0px);
-    border: 3px solid rgb(97, 111, 172);
+    border: 3px solid red;
 }
