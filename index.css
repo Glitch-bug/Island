@@ -6,3 +6,9 @@
 body {
     background-color: black;
 }
+
+
+#game {
+    margin: 0px, 50%, 0px 50%;
+    transform: translate(-50%, 0px);
+}
